@@ -1,0 +1,124 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{verbatim}
+#Media de unos valores aleatorios entre -100 y 100
+import random
+a = []
+for i in range(1000):
+    a.append(random.randint(-100, 100))
+mean(a)
+\end{verbatim}
+
+\begin{verbatim}
+-3481/1000
+\end{verbatim}
+
+\begin{verbatim}
+#Media de la muestra
+s = (71 + 73 + 59 + 62 + 65 + 61 + 73 + 61) / 8
+mean([float(s)])
+\end{verbatim}
+
+\begin{verbatim}
+65.625
+\end{verbatim}
+
+\begin{verbatim}
+#Mediana de la muestra
+e = 71, 73, 59, 62, 65, 61, 73, 61
+median(e).n(digits=5)
+\end{verbatim}
+
+\begin{verbatim}
+63.500
+\end{verbatim}
+
+\begin{verbatim}
+#Moda de la muestra
+u = 71, 73, 59, 62, 65, 61, 73, 61
+mode(u)
+\end{verbatim}
+
+\begin{verbatim}
+[61, 73]
+\end{verbatim}
+
+\begin{verbatim}
+#Desviacion tipica de la muestra
+q = 71, 73, 59, 62, 65, 61, 73, 61
+float(std(q))
+\end{verbatim}
+
+\begin{verbatim}
+5.829420456369815
+\end{verbatim}
+
+\begin{verbatim}
+#Varianza de la muestra
+w = 71, 73, 59, 62, 65, 61, 73, 61
+float(variance(w))
+\end{verbatim}
+
+\begin{verbatim}
+33.982142857142854
+\end{verbatim}
+
+\begin{verbatim}
+#Rango de las alturas
+73 - 59
+\end{verbatim}
+
+\begin{verbatim}
+14
+\end{verbatim}
+
+\end{document}
